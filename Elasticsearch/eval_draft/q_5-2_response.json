@@ -1,0 +1,106 @@
+{
+  "took": 1,
+  "timed_out": false,
+  "_shards": {
+    "total": 1,
+    "successful": 1,
+    "skipped": 0,
+    "failed": 0
+  },
+  "hits": {
+    "total": {
+      "value": 842,
+      "relation": "eq"
+    },
+    "max_score": null,
+    "hits": []
+  },
+  "aggregations": {
+    "agg_terms": {
+      "doc_count_error_upper_bound": 0,
+      "sum_other_doc_count": 596,
+      "buckets": [
+        {
+          "key": "",
+          "doc_count": 151
+        },
+        {
+          "key": "Disappointed",
+          "doc_count": 16
+        },
+        {
+          "key": "Poor quality",
+          "doc_count": 12
+        },
+        {
+          "key": "Disappointing",
+          "doc_count": 8
+        },
+        {
+          "key": "Not as pictured",
+          "doc_count": 6
+        },
+        {
+          "key": "Huge",
+          "doc_count": 5
+        },
+        {
+          "key": "Terrible",
+          "doc_count": 5
+        },
+        {
+          "key": "Nope",
+          "doc_count": 4
+        },
+        {
+          "key": "Poor fit",
+          "doc_count": 4
+        },
+        {
+          "key": "Too much fabric",
+          "doc_count": 4
+        },
+        {
+          "key": "Unflattering",
+          "doc_count": 4
+        },
+        {
+          "key": "Weird fit",
+          "doc_count": 4
+        },
+        {
+          "key": "Awful",
+          "doc_count": 3
+        },
+        {
+          "key": "Horrible",
+          "doc_count": 3
+        },
+        {
+          "key": "Not flattering",
+          "doc_count": 3
+        },
+        {
+          "key": "Not what i expected",
+          "doc_count": 3
+        },
+        {
+          "key": "Odd fit",
+          "doc_count": 3
+        },
+        {
+          "key": "So disappointed",
+          "doc_count": 3
+        },
+        {
+          "key": "So disappointed!",
+          "doc_count": 3
+        },
+        {
+          "key": "Boxy",
+          "doc_count": 2
+        }
+      ]
+    }
+  }
+}

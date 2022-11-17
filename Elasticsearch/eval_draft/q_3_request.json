@@ -1,0 +1,10 @@
+{
+  "size": 0,
+  "aggs": {
+    "find_missing_review_text": {
+      "missing": {
+        "field": "Review Text.keyword"
+      }
+    }
+  }
+}

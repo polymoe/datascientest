@@ -1,0 +1,25 @@
+{
+  "size": 0,
+  "aggs": {
+    "agg_rating": {
+      "terms": {
+        "field": "Class Name.keyword"
+      },
+      "aggs": {
+        "rating_avg": {
+          "avg": {
+            "field": "Rating"
+          }
+        },
+        "rating_median": {
+          "percentiles": {
+            "field": "Rating",
+            "percents": [
+              50
+            ]
+          }
+        }
+      }
+    }
+  }
+}

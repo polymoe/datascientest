@@ -1,0 +1,13 @@
+# Reindex
+POST /_reindex
+{
+	"source": {
+		"index": "ecom"
+	},
+	"dest": {
+		"index":"eval"
+	}
+}
+
+# Suppression de l'ancien index
+DELETE /ecom

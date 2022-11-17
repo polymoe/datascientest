@@ -1,0 +1,106 @@
+{
+  "took": 1,
+  "timed_out": false,
+  "_shards": {
+    "total": 1,
+    "successful": 1,
+    "skipped": 0,
+    "failed": 0
+  },
+  "hits": {
+    "total": {
+      "value": 10000,
+      "relation": "gte"
+    },
+    "max_score": null,
+    "hits": []
+  },
+  "aggregations": {
+    "agg_terms": {
+      "doc_count_error_upper_bound": 0,
+      "sum_other_doc_count": 9911,
+      "buckets": [
+        {
+          "key": "",
+          "doc_count": 2259
+        },
+        {
+          "key": "Love it!",
+          "doc_count": 125
+        },
+        {
+          "key": "Love",
+          "doc_count": 84
+        },
+        {
+          "key": "Beautiful",
+          "doc_count": 83
+        },
+        {
+          "key": "Love!",
+          "doc_count": 78
+        },
+        {
+          "key": "Beautiful!",
+          "doc_count": 59
+        },
+        {
+          "key": "Love it",
+          "doc_count": 54
+        },
+        {
+          "key": "Gorgeous",
+          "doc_count": 49
+        },
+        {
+          "key": "Love this dress!",
+          "doc_count": 48
+        },
+        {
+          "key": "Perfect",
+          "doc_count": 48
+        },
+        {
+          "key": "Beautiful dress",
+          "doc_count": 45
+        },
+        {
+          "key": "Great dress",
+          "doc_count": 37
+        },
+        {
+          "key": "Great top",
+          "doc_count": 35
+        },
+        {
+          "key": "Perfect!",
+          "doc_count": 35
+        },
+        {
+          "key": "Super cute",
+          "doc_count": 32
+        },
+        {
+          "key": "Great dress!",
+          "doc_count": 31
+        },
+        {
+          "key": "Adorable",
+          "doc_count": 30
+        },
+        {
+          "key": "Great top!",
+          "doc_count": 30
+        },
+        {
+          "key": "Love this dress",
+          "doc_count": 30
+        },
+        {
+          "key": "Gorgeous!",
+          "doc_count": 28
+        }
+      ]
+    }
+  }
+}

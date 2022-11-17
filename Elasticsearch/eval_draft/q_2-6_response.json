@@ -1,0 +1,180 @@
+{
+  "took": 1,
+  "timed_out": false,
+  "_shards": {
+    "total": 1,
+    "successful": 1,
+    "skipped": 0,
+    "failed": 0
+  },
+  "hits": {
+    "total": {
+      "value": 10000,
+      "relation": "gte"
+    },
+    "max_score": null,
+    "hits": []
+  },
+  "aggregations": {
+    "agg_dept": {
+      "doc_count_error_upper_bound": 0,
+      "sum_other_doc_count": 0,
+      "buckets": [
+        {
+          "key": "Tops",
+          "doc_count": 10468,
+          "agg_prod": {
+            "doc_count_error_upper_bound": 0,
+            "sum_other_doc_count": 0,
+            "buckets": [
+              {
+                "key": "Knits",
+                "doc_count": 4843
+              },
+              {
+                "key": "Blouses",
+                "doc_count": 3097
+              },
+              {
+                "key": "Sweaters",
+                "doc_count": 1428
+              },
+              {
+                "key": "Fine gauge",
+                "doc_count": 1100
+              }
+            ]
+          }
+        },
+        {
+          "key": "Dresses",
+          "doc_count": 6319,
+          "agg_prod": {
+            "doc_count_error_upper_bound": 0,
+            "sum_other_doc_count": 0,
+            "buckets": [
+              {
+                "key": "Dresses",
+                "doc_count": 6319
+              }
+            ]
+          }
+        },
+        {
+          "key": "Bottoms",
+          "doc_count": 3799,
+          "agg_prod": {
+            "doc_count_error_upper_bound": 0,
+            "sum_other_doc_count": 0,
+            "buckets": [
+              {
+                "key": "Pants",
+                "doc_count": 1388
+              },
+              {
+                "key": "Jeans",
+                "doc_count": 1147
+              },
+              {
+                "key": "Skirts",
+                "doc_count": 945
+              },
+              {
+                "key": "Shorts",
+                "doc_count": 317
+              },
+              {
+                "key": "Casual bottoms",
+                "doc_count": 2
+              }
+            ]
+          }
+        },
+        {
+          "key": "Intimate",
+          "doc_count": 1735,
+          "agg_prod": {
+            "doc_count_error_upper_bound": 0,
+            "sum_other_doc_count": 0,
+            "buckets": [
+              {
+                "key": "Lounge",
+                "doc_count": 691
+              },
+              {
+                "key": "Swim",
+                "doc_count": 350
+              },
+              {
+                "key": "Sleep",
+                "doc_count": 228
+              },
+              {
+                "key": "Legwear",
+                "doc_count": 165
+              },
+              {
+                "key": "Intimates",
+                "doc_count": 154
+              },
+              {
+                "key": "Layering",
+                "doc_count": 146
+              },
+              {
+                "key": "Chemises",
+                "doc_count": 1
+              }
+            ]
+          }
+        },
+        {
+          "key": "Jackets",
+          "doc_count": 1032,
+          "agg_prod": {
+            "doc_count_error_upper_bound": 0,
+            "sum_other_doc_count": 0,
+            "buckets": [
+              {
+                "key": "Jackets",
+                "doc_count": 704
+              },
+              {
+                "key": "Outerwear",
+                "doc_count": 328
+              }
+            ]
+          }
+        },
+        {
+          "key": "Trend",
+          "doc_count": 119,
+          "agg_prod": {
+            "doc_count_error_upper_bound": 0,
+            "sum_other_doc_count": 0,
+            "buckets": [
+              {
+                "key": "Trend",
+                "doc_count": 119
+              }
+            ]
+          }
+        },
+        {
+          "key": "",
+          "doc_count": 14,
+          "agg_prod": {
+            "doc_count_error_upper_bound": 0,
+            "sum_other_doc_count": 0,
+            "buckets": [
+              {
+                "key": "",
+                "doc_count": 14
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,166 @@
+{
+  "took": 1,
+  "timed_out": false,
+  "_shards": {
+    "total": 1,
+    "successful": 1,
+    "skipped": 0,
+    "failed": 0
+  },
+  "hits": {
+    "total": {
+      "value": 10000,
+      "relation": "gte"
+    },
+    "max_score": null,
+    "hits": []
+  },
+  "aggregations": {
+    "agg_articles": {
+      "doc_count_error_upper_bound": 0,
+      "sum_other_doc_count": 3833,
+      "buckets": [
+        {
+          "key": "Dresses",
+          "doc_count": 3397,
+          "agg_dept": {
+            "doc_count_error_upper_bound": 0,
+            "sum_other_doc_count": 0,
+            "buckets": [
+              {
+                "key": "Dresses",
+                "doc_count": 3397,
+                "agg_div": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": [
+                    {
+                      "key": "General",
+                      "doc_count": 2023
+                    },
+                    {
+                      "key": "General Petite",
+                      "doc_count": 1374
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "key": "Knits",
+          "doc_count": 2589,
+          "agg_dept": {
+            "doc_count_error_upper_bound": 0,
+            "sum_other_doc_count": 0,
+            "buckets": [
+              {
+                "key": "Tops",
+                "doc_count": 2589,
+                "agg_div": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": [
+                    {
+                      "key": "General",
+                      "doc_count": 1710
+                    },
+                    {
+                      "key": "General Petite",
+                      "doc_count": 879
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "key": "Blouses",
+          "doc_count": 1686,
+          "agg_dept": {
+            "doc_count_error_upper_bound": 0,
+            "sum_other_doc_count": 0,
+            "buckets": [
+              {
+                "key": "Tops",
+                "doc_count": 1686,
+                "agg_div": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": [
+                    {
+                      "key": "General",
+                      "doc_count": 1069
+                    },
+                    {
+                      "key": "General Petite",
+                      "doc_count": 617
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "key": "Pants",
+          "doc_count": 816,
+          "agg_dept": {
+            "doc_count_error_upper_bound": 0,
+            "sum_other_doc_count": 0,
+            "buckets": [
+              {
+                "key": "Bottoms",
+                "doc_count": 816,
+                "agg_div": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": [
+                    {
+                      "key": "General",
+                      "doc_count": 471
+                    },
+                    {
+                      "key": "General Petite",
+                      "doc_count": 345
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "key": "Sweaters",
+          "doc_count": 810,
+          "agg_dept": {
+            "doc_count_error_upper_bound": 0,
+            "sum_other_doc_count": 0,
+            "buckets": [
+              {
+                "key": "Tops",
+                "doc_count": 810,
+                "agg_div": {
+                  "doc_count_error_upper_bound": 0,
+                  "sum_other_doc_count": 0,
+                  "buckets": [
+                    {
+                      "key": "General",
+                      "doc_count": 495
+                    },
+                    {
+                      "key": "General Petite",
+                      "doc_count": 315
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

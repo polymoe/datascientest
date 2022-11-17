@@ -1,0 +1,17 @@
+{
+  "size": 0,
+  "aggs": {
+    "agg_dept": {
+      "terms": {
+        "field": "Department Name.keyword"
+      },
+      "aggs": {
+        "agg_prod": {
+          "terms": {
+            "field": "Class Name.keyword"
+          }
+        }
+      }
+    }
+  }
+}

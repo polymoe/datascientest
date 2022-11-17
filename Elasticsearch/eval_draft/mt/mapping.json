@@ -1,0 +1,67 @@
+PUT /eval
+{
+  "mappings" : {
+    "properties" : {
+      "Age" : {
+        "type" : "integer"
+      },
+      "Class Name" : {
+        "type" : "text",
+        "fields" : {
+          "keyword" : {
+            "type" : "keyword",
+            "ignore_above" : 256
+          }
+        }
+      },
+      "Clothing ID" : {
+        "type" : "integer"
+      },
+      "Department Name" : {
+        "type" : "text",
+        "fields" : {
+          "keyword" : {
+            "type" : "keyword",
+            "ignore_above" : 256
+          }
+        }
+      },
+      "Division Name" : {
+        "type" : "text",
+        "fields" : {
+          "keyword" : {
+            "type" : "keyword",
+            "ignore_above" : 256
+          }
+        }
+      },
+      "Positive Feedback Count" : {
+        "type" : "integer"
+      },
+      "Rating" : {
+        "type" : "float"
+      },
+      "Recommended IND" : {
+        "type" : "integer"
+      },
+      "Review Text" : {
+        "type" : "text",
+        "fields" : {
+          "keyword" : {
+            "type" : "keyword",
+            "ignore_above" : 256
+          }
+        }
+      },
+      "Title" : {
+        "type" : "text",
+        "fields" : {
+          "keyword" : {
+            "type" : "keyword",
+            "ignore_above" : 256
+          }
+        }
+      }
+    }
+  }
+}

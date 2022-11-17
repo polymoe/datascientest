@@ -1,0 +1,34 @@
+{
+  "size": 0,
+  "query": {
+    "range": {
+      "Rating": {
+        "lte": 1
+      }
+    }
+  },
+  "aggs": {
+    "agg_articles": {
+      "terms": {
+        "field": "Class Name.keyword",
+        "size": 5
+      },
+      "aggs": {
+        "agg_dept": {
+          "terms": {
+            "field": "Department Name.keyword",
+            "size": 5
+          },
+          "aggs": {
+            "agg_div": {
+              "terms": {
+                "field": "Division Name.keyword",
+                "size": 5
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
