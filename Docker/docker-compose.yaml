@@ -1,0 +1,28 @@
+version: "3.9"
+services:
+  jupyter:
+    image: jupyter/minimal-notebook:ubuntu-18.04
+    container_name: my_jupyter_from_compose
+    networks:
+      - my_network_from_compose
+    volumes:
+      - .:/home/jovyan/work
+    ports:
+      - target: 8888
+        published: 4444
+        protocol: tcp
+        mode: host
+    environment:
+      JUPYTER_TOKEN: "bonjour"
+  elasticsearch:
+    image: elasticsearch:7.2.0
+    container_name: my_es_from_compose
+    networks:
+      - my_network_from_compose
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+    environment:
+      discovery.type: single-node
+networks:
+  my_network_from_compose:

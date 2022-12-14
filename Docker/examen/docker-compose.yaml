@@ -1,0 +1,68 @@
+version: "3.9"
+services:
+  fastapi:
+    image: datascientest/fastapi:1.0.0
+    container_name: $api_name
+    networks:
+      - my_network_from_compose
+    expose:
+      - "8000"
+  test_authentication:
+    image: test-authentication:latest
+    container_name: test_authentication_from_compose
+    environment:
+      - LOG=$LOG
+      - api_name=$api_name
+    build:
+      context: ./test_authentication
+      dockerfile: Dockerfile
+      args: 
+        - LOG_arg=$LOG
+        - api_name_arg=$api_name
+    networks:
+      - my_network_from_compose
+    volumes:
+      - ./log:/my_log
+  test_authorization:
+    image: test-authorization:latest
+    container_name: test_authorization_from_compose
+    environment:
+      - LOG=$LOG
+      - api_name=$api_name
+      - alice_sentence_env=$pos_sentence
+      - bob_sentence_env=$neg_sentence
+    build:
+      context: ./test_authorization
+      dockerfile: Dockerfile
+      args: 
+        - LOG_arg=$LOG
+        - api_name_arg=$api_name
+        - alice_sentence_arg=$pos_sentence
+        - bob_sentence_arg=$neg_sentence
+    networks:
+      - my_network_from_compose
+    volumes:
+      - ./log:/my_log
+  test_content:
+    image: test-content:latest
+    container_name: test_content_from_compose
+    environment:
+      - LOG=$LOG
+      - api_name=$api_name
+      - pos_sentence_env=$pos_sentence
+      - neg_sentence_env=$neg_sentence
+    build:
+      context: ./test_content
+      dockerfile: Dockerfile
+      args: 
+        - LOG_arg=$LOG
+        - api_name_arg=$api_name
+        - pos_sentence_arg=$pos_sentence
+        - neg_sentence_arg=$neg_sentence
+    networks:
+      - my_network_from_compose
+    volumes:
+      - ./log:/my_log
+networks:
+  my_network_from_compose:
+
