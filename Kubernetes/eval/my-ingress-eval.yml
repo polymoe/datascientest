@@ -1,0 +1,10 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: my-data-api-ingress
+spec:
+  defaultBackend:
+    service:
+      name: my-data-api-service
+      port:
+        number: 8001   # pour exposer à l'extérieur le port de l'API

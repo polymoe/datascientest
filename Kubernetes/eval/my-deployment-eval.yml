@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-data-api-deployment
+  labels:
+    app: my-data-api
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: my-data-api
+  template:
+    metadata:
+      labels:
+        app: my-data-api
+    spec:
+      containers:
+      - name: my-data-api-sql
+        image: datascientest/mysql-k8s:1.0.0
+        ports:
+        - containerPort: 3306
+        env:
+      - name: my-data-api-api
+        image: polymoe/k8s_eval_api:1.0.0
+        ports:
+        - containerPort: 8000
+        env:
+        - name: DB_PASS     # le mot de passe de la base mysql est fourni dans un Secret
+          valueFrom:
+            secretKeyRef:
+              name: my-secret-eval
+              key: db-pass
+        - name: MY_POD_IP     # pour récupérer et fournir aux containers l'adresse IP du pod (et donc également des containers). Utile pour communiquer entre FastAPI et MySQL
+          valueFrom:
+            fieldRef:
+              fieldPath: status.podIP
