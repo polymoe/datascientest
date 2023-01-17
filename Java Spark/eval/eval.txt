@@ -1,0 +1,36 @@
+/* =================================================== */
+/* DOCUMENTATION QUI ACCOMPAGNE LE CODE JAVA eval.java */
+/* =================================================== */
+
+/* Auteur */
+Mohamed TOUMI
+
+/* Date */
+17 nov 2022
+
+
+
+/* ============================== */
+/* Paramètres de cross validation */
+/* ============================== */
+
+Dans le cadre d'un modèle de régression linéaire, différents paramètres peuvent être entrainables.
+Les paramètres retenus dans le présent fichier sont : 
+- regParam :  définit la valeur du paramètre de régularisation. plus il est élevé, plus la régularisation est importante (les poids décroissent donc). Nous avons pris 3 valeurs entre 0.01 et 1.
+- fitIntercept : oui/non interception avec 0. Si non, alors calculer l'interception.
+- maxIter : est le nombre maximal d'itérations pour atteindre la convergence. Nous avons pris : 1, 10 et 100.
+- elasticNetParam : similaire au regParam (qui représente le lambda), celui-ci est le alpha de la régularisation avec elastic net. Nous avons pris plusieurs valeurs entre 0 et 1.
+
+
+
+/* ========= */
+/* Résultats */
+/* ========= */
+Sur cette base, la cross validation a permis d'identifier les paramètres aboutissant à la meilleure performance du modèle. il s'agit de : 
+- regParam :0.1
+- fitIntercept :true
+- maxIter :100
+- elasticNetParam :0.8
+
+pour ces paramètres, la meilleure performance est de 18.23. La métrique d'évaluation est LinearEvaluator, qui utilise le RMSE.
+L'écart quadratique moyen (RMSE) est l'écart-type des résidus (erreurs de prévision). Les résidus sont la mesure de l'écart entre les points de données et la ligne de régression. La métrique RMSE est la mesure de la ventilation de ces résidus. En d'autres termes, elle indique la concentration des données autour de la ligne du meilleur ajustement. La valeur du RMSE permet de comparer et de choisir entre plusieurs modèles.![image](https://user-images.githubusercontent.com/103457375/212936623-2b03625d-af35-47af-8f55-f667e7ff6b26.png)
